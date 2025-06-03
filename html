@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - BRUHPY</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    nav a {
+      margin-left: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.3em;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffcc00; }
+    header {
+      padding: 80px 20px 10px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 5em;
+      margin: 0;
+      text-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00;
+      animation: flicker 2s infinite;
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.5;
+        text-shadow: none;
+      }
+    }
+    header p.main-quote {
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 2em;
+      margin-top: 10px;
+    }
+    .quote-strip {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      margin: 10px 0 30px;
+    }
+    .quote-strip span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 35s linear infinite;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.9em;
+      letter-spacing: 1px;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .info-line {
+      margin: 10px 0;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+    }
+    .gallery-container {
+      position: relative;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .gallery {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 3em;
+      color: #ffcc00;
+      cursor: pointer;
+      z-index: 10;
+      user-select: none;
+    }
+    .arrow.left { left: 10px; }
+    .arrow.right { right: 10px; }
+    .fade-shadow {
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 100%;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .fade-shadow.left {
+      left: 0;
+      background: linear-gradient(to right, #000 60%, transparent);
+    }
+    .fade-shadow.right {
+      right: 0;
+      background: linear-gradient(to left, #000 60%, transparent);
+    }
+    .social-icons a {
+      margin: 0 15px;
+      font-size: 1.2em;
+      color: #fff;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover { color: #ffcc00; }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border: none;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 1.8em;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .blurred {
+      filter: blur(8px);
+      pointer-events: none;
+    }
+    @media (max-width: 600px) {
+      nav a { font-size: 1em; margin-left: 10px; }
+      .arrow { font-size: 2em; }
+    }
+  </style>
+</head>
+<body>
+  <div id="page-content">
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+      <h1>BRUHPY</h1>
+      <p class="main-quote">"Stay humble, stay hungry, and keep pushing forward."</p>
+      <div class="quote-strip">
+        <span>
+          "Believe in yourself." &nbsp; • &nbsp;
+          "Every moment counts." &nbsp; • &nbsp;
+          "Live with purpose." &nbsp; • &nbsp;
+          "Kindness is power." &nbsp; • &nbsp;
+          "Focus on progress." &nbsp; • &nbsp;
+          "Chase your dreams." &nbsp; • &nbsp;
+          "Keep moving forward." &nbsp; • &nbsp;
+          "Stay positive always." &nbsp; • &nbsp;
+          "Love what you do." &nbsp; • &nbsp;
+          "Never give up." &nbsp; • &nbsp;
+          "Stay curious." &nbsp; • &nbsp;
+          "Make today amazing." &nbsp; • &nbsp;
+          "You are enough." &nbsp; • &nbsp;
+          "Be your own hero." &nbsp; • &nbsp;
+          "Shine bright today."
+        </span>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi! I'm BRUHPY aka Bruh, just a random dude who loves spending time on social media, discovering cool content, vibing with music, and sometimes getting lost in gaming or creative projects. I’m here to share good vibes, connect with awesome people, and maybe make you smile along the way!</p>
+      <p class="info-line">GENDER: MALE | AGE: 21 | BDAY: 27/10/2003</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Best Memory</h2>
+      <div class="gallery-container">
+        <span class="arrow left" onclick="prevImage()">❮</span>
+        <div class="fade-shadow left"></div>
+        <div class="gallery" id="gallery-strip">
+          <img src="https://picsum.photos/800/600?1" onclick="zoomImage(this.src)">
+          <img src="https://picsum.photos/800/600?2" onclick="zoomImage(this.src)">
+          <img src="https://picsum.photos/800/600?3" onclick="zoomImage(this.src)">
+          <img src="https://picsum.photos/800/600?4" onclick="zoomImage(this.src)">
+          <img src="https://picsum.photos/800/600?5" onclick="zoomImage(this.src)">
+        </div>
+        <div class="fade-shadow right"></div>
+        <span class="arrow right" onclick="nextImage()">❯</span>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓</p>
+      <div class="social-icons">
+        <a href="#">YOUTUBE</a>
+        <a href="#">SPOTIFY</a>
+        <a href="#">DISCORD</a>
+      </div>
+    </section>
+  </div>
+
+  <div class="overlay" id="overlay">
+    <span class="close-btn" onclick="closeZoom()">❌</span>
+    <img id="zoomed-image" src="" alt="Zoomed Image">
+  </div>
+
+  <script>
+    const gallery = document.getElementById('gallery-strip');
+    const overlay = document.getElementById('overlay');
+    const zoomedImg = document.getElementById('zoomed-image');
+    const pageContent = document.getElementById('page-content');
+
+    function nextImage() {
+      gallery.style.transition = 'transform 0.5s ease';
+      gallery.style.transform = 'translateX(-160px)';
+      setTimeout(() => {
+        gallery.appendChild(gallery.firstElementChild);
+        gallery.style.transition = 'none';
+        gallery.style.transform = 'translateX(0)';
+      }, 500);
+    }
+
+    function prevImage() {
+      gallery.insertBefore(gallery.lastElementChild, gallery.firstElementChild);
+      gallery.style.transition = 'none';
+      gallery.style.transform = 'translateX(-160px)';
+      setTimeout(() => {
+        gallery.style.transition = 'transform 0.5s ease';
+        gallery.style.transform = 'translateX(0)';
+      }, 20);
+    }
+
+    function zoomImage(src) {
+      zoomedImg.src = src;
+      overlay.style.display = 'flex';
+      pageContent.classList.add('blurred');
+    }
+
+    function closeZoom() {
+      overlay.style.display = 'none';
+      zoomedImg.src = '';
+      pageContent.classList.remove('blurred');
+    }
+  </script>
+</body>
+</html>
