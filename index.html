@@ -55,14 +55,12 @@
       width: 100%;
       overflow: hidden;
       white-space: nowrap;
-      box-sizing: border-box;
       margin: 10px 0 30px;
     }
     .quote-strip span {
       display: inline-block;
       padding-left: 100%;
       animation: scroll-left 35s linear infinite;
-      font-family: 'Bebas Neue', sans-serif;
       font-size: 0.9em;
       letter-spacing: 1px;
     }
@@ -80,6 +78,11 @@
       margin: 10px 0;
       font-size: 1.2em;
       letter-spacing: 1px;
+    }
+    .info-left {
+      text-align: left;
+      padding-left: 20px;
+      margin-top: 20px;
     }
     .gallery-container {
       position: relative;
@@ -109,7 +112,6 @@
       color: #ffcc00;
       cursor: pointer;
       z-index: 10;
-      user-select: none;
     }
     .arrow.left { left: 10px; }
     .arrow.right { right: 10px; }
@@ -128,6 +130,22 @@
     .fade-shadow.right {
       right: 0;
       background: linear-gradient(to left, #000 60%, transparent);
+    }
+    .discord-promo {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .discord-promo img {
+      width: 120px;
+      height: 120px;
+      transition: transform 0.3s;
+      filter: grayscale(100%);
+    }
+    .discord-promo img:hover {
+      transform: scale(1.1);
+      filter: grayscale(0%);
     }
     .social-icons a {
       margin: 0 15px;
@@ -150,7 +168,6 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      border: none;
     }
     .close-btn {
       position: absolute;
@@ -159,7 +176,6 @@
       font-size: 1.8em;
       color: #fff;
       cursor: pointer;
-      z-index: 1001;
     }
     .blurred {
       filter: blur(8px);
@@ -173,39 +189,31 @@
 </head>
 <body>
   <div id="page-content">
+
     <nav>
       <a href="#about">About Me</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Social Media</a>
     </nav>
 
     <header>
       <h1>BRUHPY</h1>
       <p class="main-quote">"Stay humble, stay hungry, and keep pushing forward."</p>
       <div class="quote-strip">
-        <span>
-          "Believe in yourself." &nbsp; • &nbsp;
-          "Every moment counts." &nbsp; • &nbsp;
-          "Live with purpose." &nbsp; • &nbsp;
-          "Kindness is power." &nbsp; • &nbsp;
-          "Focus on progress." &nbsp; • &nbsp;
-          "Chase your dreams." &nbsp; • &nbsp;
-          "Keep moving forward." &nbsp; • &nbsp;
-          "Stay positive always." &nbsp; • &nbsp;
-          "Love what you do." &nbsp; • &nbsp;
-          "Never give up." &nbsp; • &nbsp;
-          "Stay curious." &nbsp; • &nbsp;
-          "Make today amazing." &nbsp; • &nbsp;
-          "You are enough." &nbsp; • &nbsp;
-          "Be your own hero." &nbsp; • &nbsp;
-          "Shine bright today."
-        </span>
+        <span>"Believe in yourself." • "Stay curious." • "Never give up." • "Shine bright today."</span>
       </div>
     </header>
 
     <section id="about">
       <h2>About Me</h2>
-      <p>Hi! I'm BRUHPY aka Bruh, just a random dude who loves spending time on social media, discovering cool content, vibing with music, and sometimes getting lost in gaming or creative projects. I’m here to share good vibes, connect with awesome people, and maybe make you smile along the way!</p>
-      <p class="info-line">GENDER: MALE | AGE: 21 | BDAY: 27/10/2003</p>
+      <p>YO WSG CHAT, ITS ME YO BOY BRUHPY AKA BRUH, WELCOME TO MY WEBSITE, IN HERE IM JUST GONNA PUT MY SOCIAL MEDIA LINK ONLY AND MAYBE SOME NICE COOL THINGS SOON, OH YEAH AND IM POOR ASF, IF U HAVE MONEH PLEASE DONATE ME.. I NEED TO BUY THAT CANDY SO BAD CUH U FEEL ME?</p>
+      <div class="info-left">
+        <p class="info-line">GENDER: MALE</p>
+        <p class="info-line">AGE: 21</p>
+        <p class="info-line">BDAY: 27/10/2003</p>
+        <p class="info-line">FAV FOOD & DRINK: Chocolate cake & iced tea (or whatever free 😭)</p>
+        <p class="info-line">HOBBY: Making stuff, chillin’ online, vibin’ to music 🎧</p>
+        <p class="info-line">GOAL: Get rich, buy candy, and maybe make a cool game one day 🎮</p>
+      </div>
     </section>
 
     <section id="gallery">
@@ -217,21 +225,26 @@
           <img src="https://picsum.photos/800/600?1" onclick="zoomImage(this.src)">
           <img src="https://picsum.photos/800/600?2" onclick="zoomImage(this.src)">
           <img src="https://picsum.photos/800/600?3" onclick="zoomImage(this.src)">
-          <img src="https://picsum.photos/800/600?4" onclick="zoomImage(this.src)">
-          <img src="https://picsum.photos/800/600?5" onclick="zoomImage(this.src)">
         </div>
         <div class="fade-shadow right"></div>
         <span class="arrow right" onclick="nextImage()">❯</span>
       </div>
     </section>
 
+    <section class="discord-promo">
+      <a href="https://discord.gg/YOUR_INVITE_LINK" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Join Discord" />
+      </a>
+      <p>Join my Discord server</p>
+    </section>
+
     <section id="contact">
-      <h2>Contact Me</h2>
+      <h2>Social Media</h2>
       <p>↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓</p>
       <div class="social-icons">
-        <a href="#">YOUTUBE</a>
-        <a href="#">SPOTIFY</a>
-        <a href="#">DISCORD</a>
+        <a href="https://youtube.com/YOUR_CHANNEL" target="_blank">YOUTUBE</a>
+        <a href="https://open.spotify.com/user/YOUR_USERNAME" target="_blank">SPOTIFY</a>
+        <a href="https://discord.gg/YOUR_INVITE_LINK" target="_blank">DISCORD</a>
       </div>
     </section>
   </div>
